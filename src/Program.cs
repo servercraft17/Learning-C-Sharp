@@ -3,11 +3,13 @@
 You don't need a main function kinda like in python, but you can't put code or functions outside of a class in other 
     source files.
 you can only do that in the main source file.
+you also dont need to import other source files, only external libraries.
 */
 
 // there are a lot of ways to print to console.
-// here is one of them.
-Console.WriteLine("Hello, World!");
+// here are two of them.
+Console.Write("!dlroW ,olleH\n"); // prints like printf in C. if you don't append '\n' then the next message printed will be on the same line.
+Console.WriteLine("Hello, World!"); // is Console.Write but it automatically appends '\n' to the end of your message.
 
 // declaring variables are similar to C, {type} {name} = {value}; or {type} {name};
 int myInt;
@@ -62,6 +64,15 @@ while (while_i < 10) {
     while_i++;
 }
 
+// foreach also exists, it works like in python.
+String[] kablam = { "rats", "rats", "rats"};
+foreach (string kablom in kablam) {
+    Console.Write(kablom);
+}
+Console.Write('\n');
+
+
+
 //###################################
 // Strings
 //###################################
@@ -81,6 +92,7 @@ npc_dialog = $"{Greetings} {Farewell}";
 // you can also append strings like this.
 npc_dialog += " Must have been the wind.";
 
+Console.WriteLine(npc_dialog);
 // strings have built in functions.
 String[] tokens = npc_dialog.Split();
 string final_dialog = "";
